@@ -54,6 +54,25 @@
                         <div class="text-pretitle with-line">
                             Hello World
                         </div>
+
+                        <div class="text-pretitle"></div>
+
+<script>
+    const text = "Hello World";
+    const container = document.querySelector(".text-pretitle");
+
+    function typeAnimation(index = 0) {
+        if (index <= text.length) {
+            container.innerHTML = text.slice(0, index);
+            setTimeout(() => typeAnimation(index + 1), 200);
+        } else {
+            setTimeout(() => typeAnimation(1), 1000); // Repeat animation
+        }
+    }
+
+    typeAnimation();
+</script>
+
                         <h1 class="text-medium-title">
                             Praveen Singh Shekhawat <br>
                             Android Application Developer <br>
